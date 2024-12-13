@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Presidential Quiz - Candidates</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css">
+    </head>
+    
+    <body>
+        <div class = "header">
+            <hr>
+            <h1>Are You A Presidential Scholar? - Candidates</h1>
+            <hr>
+        </div>
+        
+        <h2>See if you can get all the questions correct!</h2>
+        <h3>Question 1: Who Was On The Southern Democratic Ticket In 1860?</h3>
+        <h4>(Hint: They were a Confederate General)</h4>
+        
+        <p id = "youranswer1">Your Answer:</p>
+        <p id = "correctanswer1">Correct Answer:</p>
+        <p id = "result1"></p>
+        <p id = "learnmore1"></p>
+        
+        <input class = "answerbutton" id="answerbutton1" type="button" onclick="question('Who Was On The Southern Democratic Ticket In 1860?', 1, 'John C. Breckinridge', 'https://en.wikipedia.org/wiki/John_C._Breckinridge', 'https://en.wikipedia.org/wiki/1860_United_States_presidential_election', 'John C. Breckinridge', '1860 U.S. Presidential Election', 'John C. Breckinridge represented Kentucky in both houses of Congress and became the 14th and youngest-ever vice president of the United States, serving from 1857 to 1861.', 'John Breckinridge', 'John', 'Breckinridge', 'John Cabell Breckinridge', 'Traitor')" value="Answer Here!"/>
+        
+        <br>
+        <br>
+        
+        <h3>Question 2: Who Was On The Progressive Ticket In 1912?</h3>
+        <h4>(Hint: The Teddy Bear is named after them)</h4>
+        
+        <p id = "youranswer2">Your Answer:</p>
+        <p id = "correctanswer2">Correct Answer:</p>
+        <p id = "result2"></p>
+        <p id = "learnmore2"></p>
+        
+        <input class = "answerbutton" id="answerbutton2" type="button" onclick="question('Who Was On The Progressive Ticket In 1912?', 2, 'Theodore Roosevelt', 'https://en.wikipedia.org/wiki/Theodore_Roosevelt', 'https://en.wikipedia.org/wiki/1912_United_States_presidential_election', 'Theodore Roosevelt', '1912 U.S. Presidential Election', 'Theodore Roosevelt served from 1901 to 1909, winning reelection in 1904.', 'Teddy Roosevelt', 'Roosevelt', 'Theodore Roosevelt Jr.', 'Teddy', 'Theodore')" value="Answer Here!"/>
+        
+        <br>
+        <br>
+        
+        <h3>Question 3: Who Was On The American Independent Ticket In 1968?</h3>
+        <h4>(Hint: They gave the infamous "Segregation Forever" speech)</h4>
+        
+        <p id = "youranswer3">Your Answer:</p>
+        <p id = "correctanswer3">Correct Answer:</p>
+        <p id = "result3"></p>
+        <p id = "learnmore3"></p>
+        
+        <input class = "answerbutton" id="answerbutton3" type="button" onclick="question('Who Was On The American Independent Ticket In 1968?', 3, 'George Wallace', 'https://en.wikipedia.org/wiki/George_Wallace', 'https://en.wikipedia.org/wiki/1968_United_States_presidential_election', 'George Wallace', '1968 U.S. Presidential Election', 'George Wallace was the 45th governor of Alabama, serving from 1963 to 1967, again from 1971 to 1979, and finally from 1983 to 1987.', 'George Corley Wallace Jr.', 'Wallace', 'George', 'George Wallace Jr.', 'Racist')" value="Answer Here!"/>
+        
+        <br>
+        <br>
+        
+        <h3>Question 4: Who Was On The Democratic Ticket In 2016?</h3>
+        <h4>(Hint: 'I'm With Her!')</h4>
+        
+        <p id = "youranswer4">Your Answer:</p>
+        <p id = "correctanswer4">Correct Answer:</p>
+        <p id = "result4"></p>
+        <p id = "learnmore4"></p>
+        
+        <input class = "answerbutton" id="answerbutton4" type="button" onclick="question('Who Was On The Democratic Ticket In 2016?', 4, 'Hillary Clinton', 'https://en.wikipedia.org/wiki/Hillary_Clinton', 'https://en.wikipedia.org/wiki/2016_United_States_presidential_election', 'Hillary Clinton', '2016 U.S. Presidential Election', 'Hillary Clinton was the 67th United States Secretary of State from 2009 to 2013, a U.S. senator representing New York from 2001 to 2009, and the first lady of the United States from 1993 to 2001.', 'Hillary Rodham Clinton', 'Hillary Diane Rodham Clinton', 'Clinton', 'Hillary', 'Hillary Diane Clinton')" value="Answer Here!"/>
+        
+        <br>
+        <br>
+        
+        <h3>Question 5: Who Was On The Republican Ticket In 1856?</h3>
+        <h4>(Hint: They were a Union General)</h4>
+        
+        <p id = "youranswer5">Your Answer:</p>
+        <p id = "correctanswer5">Correct Answer:</p>
+        <p id = "result5"></p>
+        <p id = "learnmore5"></p>
+        
+        <input class = "answerbutton" id="answerbutton5" type="button" onclick="question('Who Was On The Republican Ticket In 1856?', 5, 'John C. Frémont', 'https://en.wikipedia.org/wiki/John_C._Fr%C3%A9mont', 'https://en.wikipedia.org/wiki/1856_United_States_presidential_election', 'John C. Frémont', '1856 U.S. Presidential Election', 'John C. Frémont was a United States Army officer, explorer, and politician. He was a United States senator from California and was the first Republican nominee for president of the U.S. in 1856 and founder of the California Republican Party when he was nominated.', 'John C. Fremont', 'Frémont', 'John Fremont', 'John Frémont', 'Fremont')" value="Answer Here!"/>
+        
+        <br>
+        <br>
+        
+        <div class = "bottom">
+        <hr>
+        <p class = "questionsright" id = "questionsrightfull"></p>
+        <div id="completionmessage">Congratulations! You have answered all the questions!</div>
+        <br>
+        <a class = "back" href = "quiz2.html">Retry</a>
+        <br>
+        <a class = "back" href = "index.html">Go Back</a>
+        <hr>
+        </div>
+        
+        <script>
+            var questionsright = 0;
+            var questionsamount = 5;
+            document.getElementById("questionsrightfull").innerHTML = "Questions Correct: " + "0" + " out of " + questionsamount;
+            
+            function question(questiontext, num, correct, link1, link2, linkname1, linkname2, extra, possibleanswer1, possibleanswer2, possibleanswer3, possibleanswer4, possibleanswer5){
+                var youranswer = document.getElementById("youranswer" + num);
+                var correctanswer = document.getElementById("correctanswer" + num);
+                var result = document.getElementById("result" + num);
+                var learnmore = document.getElementById("learnmore" + num);
+                var answerbutton = document.getElementById("answerbutton" + num);
+                var answer = prompt(questiontext);
+                
+                correctanswer.innerHTML = "Correct Answer: " + correct;
+                learnmore.innerHTML = `Learn More: <a class='learnmore' href='${link1}' target='_blank'>${linkname1}</a> <a class='learnmore' href='${link2}' target='_blank'>${linkname2}</a>`;
+                
+                if(answer === "" || answer === null){
+                    youranswer.innerHTML = "Your Answer: None";
+                    result.innerHTML = "Result: " + "Incorrect! The Answer is " + correct + "! " + extra;
+                } else {
+                    youranswer.innerHTML = "Your Answer: " + answer;
+                    if(answer.toLowerCase() === correct.toLowerCase() || answer.toLowerCase() === possibleanswer1.toLowerCase() || answer.toLowerCase() === possibleanswer2.toLowerCase() || answer.toLowerCase() === possibleanswer3.toLowerCase() || answer.toLowerCase() === possibleanswer4.toLowerCase() || answer.toLowerCase() === possibleanswer5.toLowerCase()){
+                        result.innerHTML = "Result: " + "Correct! The Answer is " + correct + "! " + extra;
+                        questionsright += 1;
+                    } else {
+                        result.innerHTML = "Result: " + "Incorrect! The Answer is " + correct + "! " + extra;
+                    }
+                }
+                
+                questionsrightfull.innerHTML = "Questions Correct: " + questionsright + " out of " + questionsamount
+                
+                if (answerbutton) {
+                    answerbutton.remove();
+                }
+                
+                checkcompletion()
+            }
+            function checkcompletion() {
+                var remainingbuttons = document.querySelectorAll(".answerbutton");
+                if(remainingbuttons.length === 0){
+                    var completionmessage = document.getElementById("completionmessage")
+                    if (questionsrightfull.innerHTML === "Questions Correct: " + questionsamount + " out of " + questionsamount){
+                        completionmessage.innerHTML = "Congratulations, you got every Question correct! Good job!"
+                    } else {
+                        completionmessage.innerHTML = "You almost got every Question correct! Try again and see if you can do better!"
+                    }
+                    completionmessage.style.display = "block"
+                }
+            }
+        </script>
+    </body>
+</html>

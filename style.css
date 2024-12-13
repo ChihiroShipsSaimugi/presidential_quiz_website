@@ -1,0 +1,64 @@
+body {
+    background-color:darkred;
+    text-align:center;
+}
+
+.quiztitle {
+   font-size:20px; 
+}
+
+.header {
+    background-color:darkblue;
+}
+
+.bottom {
+    background-color:darkblue;
+}
+
+h1 {
+    color:lightblue;
+    font-size:40px;
+}
+
+.learnmore {
+    color:red;
+    font-size:20px;
+    font-style:bold;
+}
+
+h2 {
+    color:white;
+}
+
+h3 {
+    color:teal;
+}
+
+h4 {
+    color:teal;
+    font-size:15px;
+}
+
+p {
+    color:white;
+}
+
+.back {
+    color:white;
+    font-size:20px;
+}
+
+.questionsright {
+    font-size:20px;
+    color:blue;
+    font-style:bold;
+}
+
+#completionmessage {
+    display:none; 
+    text-align:center;
+    font-weight:bold;
+    margin-top:10px;
+    font-size:30px;
+    color:lightblue;
+}
